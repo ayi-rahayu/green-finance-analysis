@@ -19,6 +19,12 @@ Repositori ini dibuat sebagai bagian dari tugas *Eco Techno Leader* untuk memaha
 GNPV = Σ (CFₜ + Eₜ) / (1 + r)ᵗ - I₀
 ```
 
+- Mengukur nilai bersih proyek hijau dengan mempertimbangkan manfaat finansial dan lingkungan.
+- **Proyek ideal**: GNPV > 0
+
+![GNPV Chart](visualizations/gnpv_bar_chart.png)
+
+
 ### 2. Environmental Dataset
 | Field | Deskripsi |
 |-------|-----------|
@@ -31,6 +37,9 @@ GNPV = Σ (CFₜ + Eₜ) / (1 + r)ᵗ - I₀
 ```math
 CROI = Σ (Rₜ + Pc) / I₀
 ```
+- Menilai efisiensi investasi dalam mengurangi emisi karbon.
+- **Proyek ideal**: CROI > 1
+![CROI Chart](visualizations/croi_bar_chart.png)
 
 ### 3. Social Dataset
 | Field | Deskripsi |
@@ -45,6 +54,12 @@ CROI = Σ (Rₜ + Pc) / I₀
 SROI = Σ (NVsocial) / I₀
 ```
 
+- Menilai manfaat sosial terhadap biaya investasi.
+- Digunakan proxy dari Community Support dan Population Density.
+  
+![SROI Chart](visualizations/sroi_bar_chart.png)
+
+
 ### 4. Economic Dataset
 | Field | Deskripsi |
 |-------|-----------|
@@ -58,7 +73,13 @@ SROI = Σ (NVsocial) / I₀
 ERAF = 1 + w₁·ΔInflasi + w₂·ΔPengangguran − w₃·ΔPDB
 ```
 
-### 4. Geospatial Dataset
+- Mengukur sensitivitas proyek terhadap kondisi ekonomi makro.
+- **ERAF > 1** menandakan risiko ekonomi meningkat.
+
+![ERAF Chart](visualizations/eraf_bar_chart.png)
+
+
+### 5. Geospatial Dataset
 | Field | Deskripsi |
 |-------|-----------|
 | `Latitude / Longitude` | Koordinat proyek. |
@@ -69,6 +90,11 @@ ERAF = 1 + w₁·ΔInflasi + w₂·ΔPengangguran − w₃·ΔPDB
 ```math
 GRI = w₁·S_hazard + w₂·S_proximity + w₃·S_landuse
 ```
+
+- Menilai risiko spasial proyek berdasarkan sumber daya, akses, dan efisiensi lokasi.
+- **Proyek ideal**: GRI < 0.7
+
+![GRI Chart](visualizations/gri_bar_chart.png)
 
 ## 📈 Model Prediktif
 - **Regresi Linear**: Prediksi pengurangan emisi berdasarkan investasi.
